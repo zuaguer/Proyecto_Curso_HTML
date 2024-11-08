@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="=en">
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Proyecto Final</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel="shortcut icon" href="/PROYECTO/assets/icons8-amazon-web-services-120.ico" type="image/x-icon">
+
+    <style>
+        body {
+            font-family: "Lucida Console", "Courier New", monospace;
+            background: linear-gradient(to right, rgb(189, 189, 255), rgb(255, 233, 236));
+            padding: 0;
+            margin: 0;
+        }
+
+        header {
+            text-align: center;
+        }
+
+        ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background-color: #333;
+        }
+
+        li {
+            float: left;
+        }
+
+        li a {
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+
+        li a:hover:not(.active) {
+            background-color: #111;
+        }
+
+        .active {
+            background-color: #04AA6D;
+        }
+
+        h1 {
+            background-color: black;
+            padding: 10px;
+            margin: 0;
+            color: #92a4ff;
+        }
+
+        input[type=text],
+        input[type=email],
+        textarea,
+        select {
+            width: 100%;
+            padding: 12px 20px;
+            margin: 8px 0;
+            display: inline-block;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+
+        input[type=submit] {
+            width: 100%;
+            background-color: #4CAF50;
+            color: white;
+            padding: 14px 20px;
+            margin: 8px 0;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        input[type=submit]:hover {
+            background-color: #45a049;
+        }
+
+        div.contenedor-formulario {
+            border-radius: 5px;
+            background-color: #f2f2f2;
+            padding: 20px;
+        }
+        .footer {
+            background-color: #333;
+            color: #FFF;
+            padding: 10px;
+            text-align: center;
+            clear: both;
+        }
+    </style>
+
+</head>
+
+<body>
+    <header>
+        <h1>Amazon Web Services</h1>
+        <nav>
+            <ul> 
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="informacion.html">Informacion</a></li>
+            <li><a href="multimedia.html">Multmedia</a></li>
+            <li><a class="active" href="contacto.html">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="contenedor-formulario">
+        <form>
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" name="nombre" placeholder="Escribe tu nombre" required minlength="3" maxlength="20">
+            <label for="apellido">Apellido:</label>
+            <input type="text" id="apellido" name="apellido" placeholder="Escribe tu apeliido" required minlength="5" maxlength="30">
+            <label for="mail">Correo electronico:</label>
+            <input type="email" id="mail" name="mail" placeholder="Escribe tu correo electronico" required maxlength="30">
+            <label for="pais">Pais de origen:</label>
+            <select name="pais" id="pais">
+                <option value="Mexico">México</option>
+                <option value="Argentina">Argentina</option>
+                <option value="Chile">Chile</option>
+                <option value="Perú">Perú</option>
+                <option value="Salvador">Salvador</option>
+                <option value="EEUU">EEUU</option>
+                <option value="Costa Rica">Costa Rica</option>
+            </select>
+            <label for="comentarios">Coloca tu solicitud: </label>
+            <textarea id="comentarios" name="comentarios" rows="5" cols="25" placeholder="Escribe tu solicitud para contactarte"></textarea>
+
+            <label for="contacto">¿Como te contactamos?:</label>
+            <input type="radio" id="contacto" name="contacto"> <i><b>Email</b></i>
+            <input type="radio" id="contacto" name="contacto"> <i><b>Whatsapp</b></i>
+            <input type="radio" id="contacto" name="contacto"> <i><b>SMS</b></i>
+            <input type="radio" id="contacto" name="contacto"> <i><b>Llamada</b></i>
+
+            <input type="submit" value="Enviar Datos">
+        </form>
+    </div>
+
+    <footer class="footer">
+        <p>Derechos reservados &copy;2024</p>
+    </footer>
+</body>
+</html>
